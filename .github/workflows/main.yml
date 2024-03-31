@@ -1,13 +1,13 @@
 name: Generate Datas
 
 on:
-  schedule: # execute every 12 hours
+  schedule: # execute a cada 12 horas
     - cron: "0 */12 * * *"
   workflow_dispatch:
 
 jobs:
   build:
-    name: Jobs to update datas
+    name: Jobs para atualizar dados
     runs-on: ubuntu-latest
     steps:
       # Snake Animation
