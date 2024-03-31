@@ -1,13 +1,13 @@
 name: Generate Datas
 
 on:
-  schedule: # execute a cada 12 horas
+  schedule: # execute every 12 hours
     - cron: "0 */12 * * *"
   workflow_dispatch:
 
 jobs:
   build:
-    name: Jobs para atualizar dados
+    name: Jobs to update datas
     runs-on: ubuntu-latest
     steps:
       # Snake Animation
@@ -19,7 +19,8 @@ jobs:
           svg_out_path: dist/github-contribution-grid-snake.svg
 
       - name: Set output variables
-        run: echo "SNAKE_GIF=${{ steps.snake-gif.outputs.file }}" >> $GITHUB_ENV
+        run: |
+          echo "SNAKE_GIF=${{ steps.snake-gif.outputs.file }}" >> $GITHUB_ENV
 
       - name: Deploy to GitHub Pages
         uses: crazy-max/ghaction-github-pages@v4.0.0
