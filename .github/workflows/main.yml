@@ -9,6 +9,8 @@ jobs:
   build:
     name: Jobs to update datas
     runs-on: ubuntu-latest
+    env:
+      SNAKE_GIF: ${{ steps.snake-gif.outputs.file }}
     steps:
       # Snake Animation
       - name: Snake Animation
@@ -17,10 +19,6 @@ jobs:
         with:
           github_user_name: raphaella220046
           svg_out_path: dist/github-contribution-grid-snake.svg
-
-      - name: Set output variables
-        run: |
-          echo "SNAKE_GIF=${{ steps.snake-gif.outputs.file }}" >> $GITHUB_ENV
 
       - name: Deploy to GitHub Pages
         uses: crazy-max/ghaction-github-pages@v4.0.0
