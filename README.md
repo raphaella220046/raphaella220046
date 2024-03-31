@@ -1,4 +1,4 @@
-<h1 align="center">Hi 👋, I'm Raphaella Tamyres!</h1>
+<h1 align="center">Hi <img src="https://raw.githubusercontent.com/kaueMarques/kaueMarques/master/hi.gif" height="30px">, I'm Raphaella Tamyres!</h1>
 <h3 align="center">Undergraduate in Science and Technology at Ilum - School of Science | Brazilian Center for Research in Energy and Materials (CNPEM)</h3>
 
 <p align="left"> <img src="https://komarev.com/ghpvc/?username=raphaella220046&label=Profile%20views&color=0e75b6&style=flat" alt="raphaella220046" /> </p>
