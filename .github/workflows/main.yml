@@ -2,7 +2,7 @@ name: Generate Datas
 
 on:
   schedule: # execute every 12 hours
-    - cron: "0 */12 * * *"
+    - cron: "* */12 * * *"
   workflow_dispatch:
 
 jobs:
@@ -11,19 +11,13 @@ jobs:
     runs-on: ubuntu-latest
     steps:
       # Snake Animation
-      - name: Snake Animation
+      - uses: Platane/snk@master
         id: snake-gif
-        uses: Platane/snk@master
         with:
           github_user_name: raphaella220046
           svg_out_path: dist/github-contribution-grid-snake.svg
 
-      - name: Set output variables
-        run: echo "SNAKE_GIF=${{ steps.snake-gif.outputs.file }}" >> $GITHUB_ENV
-
-      - name: Deploy to GitHub Pages
-        if: always() # Ensure this step always runs, even if previous steps failed
-        uses: crazy-max/ghaction-github-pages@v4.0.0
+      - uses: crazy-max/ghaction-github-pages@v4.0.0
         with:
           target_branch: output
           build_dir: dist
